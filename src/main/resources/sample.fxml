@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <MenuBar layoutX="14.0" layoutY="2.0" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="О программе">
+            <items>
+              <MenuItem fx:id="aboutMItem" mnemonicParsing="false" text="Справка" />
+               <MenuItem fx:id="aboutDevMItem" mnemonicParsing="false" text="О разработчике" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ImageView fitHeight="375.0" fitWidth="235.0" layoutX="7.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="25.0">
+         <image>
+            <Image url="@imgFx.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="menuLabel" prefHeight="375.0" prefWidth="364.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="235.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0" />
+      <VBox fx:id="programmVbox" layoutX="393.0" layoutY="100.0" prefHeight="375.0" prefWidth="364.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+         <children>
+            <Button fx:id="buttonStart" mnemonicParsing="false" text="запустить микроба">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Label fx:id="startTimeLabel" text="Время запуска микроба ЧЧ/ММ/СС">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+            <Button fx:id="buttonStop" mnemonicParsing="false" text="Остановить размножение">
+               <graphic>
+                  <TextField fx:id="textFildSetTime" promptText="ЧЧ:ММ" />
+               </graphic>
+            </Button>
+            <Label fx:id="counterLabel" alignment="CENTER" contentDisplay="CENTER" text="Количество микробов  " VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+      <Button fx:id="buttonBack" mnemonicParsing="false" text="Назад" visible="false" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="25.0" />
+   </children>
+</AnchorPane>
